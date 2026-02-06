@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Fredoka", sans-serif;
+}
+
+.mainScreen{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60vw;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.bodyLeft{
+  width: 23vw;
+  height: min(120vh, 900px);
+  
+  position: absolute;
+  transform: translate(-100%,0);
+  z-index: 2;
+  
+  animation-name: slideLeft;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.36, 1);
+}
+
+.bodyRight{
+  width: 23vw;
+  height: min(120vh, 900px);
+
+  position: absolute;
+  transform: translate(100%,0);
+  z-index: 2;
+
+  animation-name: slideRight;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.36, 1);
+}
+
+.mainBody{
+  position: absolute;
+  width: 40vw;
+  height: min(88vh, 658.453px);
+  z-index: 1;
+  background: linear-gradient(to bottom, #00ddff, #01bdf1);
+  border: 0.5vh solid #4b9cb2;
+
+  animation-name: openHor;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft{
+  to{transform: translateX(-200%)}
+}
+
+@keyframes slideRight{
+  to{transform: translateX(200%)}
+}
+
+@keyframes openHor{
+  to{width: 78vw}
+}
+
+@keyframes openVer{
+  to{height: 100vh}
+}
+
+/*responsive animations*/
+/*width 700*/
+@keyframes slideUp700700{
+  to{transform: translateY(-76vh) rotate(90deg);}
+}
+
+@keyframes slideDown700700{
+  to{transform: translateY(76vh) rotate(90deg);}
+}
+
+@keyframes slideUp700800{
+  to{transform: translateY(-70vh) rotate(90deg);}
+}
+
+@keyframes slideDown700800{
+  to{transform: translateY(70vh) rotate(90deg);}
+}
+
+@keyframes slideUp700900{
+  to{transform: translateY(-67vh) rotate(90deg);}
+}
+
+@keyframes slideDown700900{
+  to{transform: translateY(67vh) rotate(90deg);}
+}
+
+/*width 600*/
+@keyframes slideUp600700{
+  to{transform: translateY(-70vh) rotate(90deg);}
+}
+
+@keyframes slideDown600700{
+  to{transform: translateY(70vh) rotate(90deg);}
+}
+
+@keyframes slideUp600800{
+  to{transform: translateY(-66vh) rotate(90deg);}
+}
+
+@keyframes slideDown600800{
+  to{transform: translateY(66vh) rotate(90deg);}
+}
+
+@keyframes slideUp600900{
+  to{transform: translateY(-63vh) rotate(90deg);}
+}
+
+@keyframes slideDown600900{
+  to{transform: translateY(63vh) rotate(90deg);}
+}
+
+/*width 500*/
+@keyframes slideUp500700{
+  to{transform: translateY(-65vh) rotate(90deg);}
+}
+
+@keyframes slideDown500700{
+  to{transform: translateY(65vh) rotate(90deg);}
+}
+
+@keyframes slideUp500800{
+  to{transform: translateY(-62vh) rotate(90deg);}
+}
+
+@keyframes slideDown500800{
+  to{transform: translateY(62vh) rotate(90deg);}
+}
+
+@keyframes slideUp500900{
+  to{transform: translateY(-60vh) rotate(90deg);}
+}
+
+@keyframes slideDown500900{
+  to{transform: translateY(60vh) rotate(90deg);}
+}
+
+/*width 400*/
+
+@keyframes slideUp400700{
+  to{transform: translateY(-60vh) rotate(90deg);}
+}
+
+@keyframes slideDown400700{
+  to{transform: translateY(60vh) rotate(90deg);}
+}
+
+@keyframes slideUp400800{
+  to{transform: translateY(-57vh) rotate(90deg);}
+}
+
+@keyframes slideDown400800{
+  to{transform: translateY(57vh) rotate(90deg);}
+}
+
+@keyframes slideUp400900{
+  to{transform: translateY(-55vh) rotate(90deg);}
+}
+
+@keyframes slideDown400900{
+  to{transform: translateY(55vh) rotate(90deg);}
+}
+
+/*width 800*/
+@media(max-width: 700px){ /*for changing side img to vertical*/
+  .bodyLeft{
+    transform: translate(0, -70vh) rotate(90deg);
+
+    width: auto;
+    height: 120vw;
+    
+    position: absolute;
+    z-index: 2;
+
+    animation-name: bruhhh;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 70vh) rotate(90deg);
+
+    width: auto;
+    height: 120vw;
+    
+    position: absolute;
+    z-index: 2;
+
+    animation-name: slideLeftMobile;
+  }
+
+  .mainBody{
+    position: absolute;
+    width: 85vw;
+    height: 70vh;
+
+    animation-name: openVer;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:700px) and (min-height:700px){
+  .bodyLeft{
+    transform: translate(0, -55vh) rotate(90deg);
+    animation-name: slideUp700700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 55vh) rotate(90deg);
+    animation-name: slideDown700700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:700px) and (min-height:800px){
+  .bodyLeft{
+    transform: translate(0, -49vh) rotate(90deg);
+    animation-name: slideUp700800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 49vh) rotate(90deg);
+    animation-name: slideDown700800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:700px) and (min-height:900px){
+  .bodyLeft{
+    transform: translate(0, -46vh) rotate(90deg);
+    animation-name: slideUp700900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 46vh) rotate(90deg);
+    animation-name: slideDown700900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+/*600 width*/
+@media(max-width:600px) and (min-height:700px){
+  .bodyLeft{
+    transform: translate(0, -49vh) rotate(90deg);
+    animation-name: slideUp600700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 49vh) rotate(90deg);
+    animation-name: slideDown600700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:600px) and (min-height:800px){
+  .bodyLeft{
+    transform: translate(0, -45vh) rotate(90deg);
+    animation-name: slideUp600800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 45vh) rotate(90deg);
+    animation-name: slideDown600800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:600px) and (min-height:900px){
+  .bodyLeft{
+    transform: translate(0, -42vh) rotate(90deg);
+    animation-name: slideUp600900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 42vh) rotate(90deg);
+    animation-name: slideDown600900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+/*500 width*/
+@media(max-width:500px) and (min-height:700px){
+  .bodyLeft{
+    transform: translate(0, -44vh) rotate(90deg);
+    animation-name: slideUp500700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 44vh) rotate(90deg);
+    animation-name: slideDown500700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:500px) and (min-height:800px){
+  .bodyLeft{
+    transform: translate(0, -41vh) rotate(90deg);
+    animation-name: slideUp500800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 41vh) rotate(90deg);
+    animation-name: slideDown500800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:500px) and (min-height:900px){
+  .bodyLeft{
+    transform: translate(0, -39vh) rotate(90deg);
+    animation-name: slideUp500900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 39vh) rotate(90deg);
+    animation-name: slideDown500900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+/*400 width*/
+@media(max-width:400px) and (min-height:700px){
+  .bodyLeft{
+    transform: translate(0, -39vh) rotate(90deg);
+    animation-name: slideUp400700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 39vh) rotate(90deg);
+    animation-name: slideDown400700;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:400px) and (min-height:800px){
+  .bodyLeft{
+    transform: translate(0, -36vh) rotate(90deg);
+    animation-name: slideUp400800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 36vh) rotate(90deg);
+    animation-name: slideDown400800;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media(max-width:400px) and (min-height:900px){
+  .bodyLeft{
+    transform: translate(0, -34vh) rotate(90deg);
+    animation-name: slideUp400900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 34vh) rotate(90deg);
+    animation-name: slideDown400900;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}

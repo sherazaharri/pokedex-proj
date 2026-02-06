@@ -1,0 +1,425 @@
+.dexScreen{
+    width: 100%;
+    height: 100%;
+}
+
+
+.welcomeText{
+    font-size: 8vw;
+    position: absolute;
+    transform: translate(22vw,33vh);
+    opacity: 0;
+    
+    color: aliceblue;
+    text-shadow: 0.08vw 0.08vw 0.12vw rgba(0, 0, 0, 0.7);
+
+    animation-name: welcomeAnim;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+}
+
+@keyframes welcomeAnim{
+    0%{opacity: 0;}
+    25%{opacity: 1;}
+    50%{opacity: 1;}
+    75%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.dexContent{
+    height: 98%;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: min(2vh, 18.84px);
+    color: aliceblue;
+
+    position: inherit;
+
+    opacity: 0;
+    animation-name: contentAnim;
+    animation-duration: 1.5s;
+    animation-delay: 5.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes contentAnim{
+    to{opacity: 1;}
+}
+
+.loadingScreen{
+    font-size: 3vw;
+    position: absolute;
+    transform: translate(0,35vh);
+}
+
+.loadingScreen h1{
+    text-shadow: 0.08vw 0.08vw 0.12vw rgba(0, 0, 0, 0.7);
+}
+
+.pokemonEnter{
+    width: 100%;
+    height: 5%;
+    cursor: pointer;
+    text-align: center;
+
+    border: 1.5px solid #dadada;
+    border-radius: 8px;
+    
+    background-color: whitesmoke;
+    background-image: url('../assets/searchicon.png');
+    background-size: 1.7vw 3.3vh;   
+    background-repeat: no-repeat;
+    background-position: 1.1% 50%;
+
+}
+
+.pokemonEnter:focus {
+    border: 1.5px solid #acacac;
+    outline: none;
+}
+
+.pokemonResult{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.pokemonData{
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3vw;
+    text-shadow:
+    0.08vw 0.08vw 0.12vw rgba(0, 0, 0, 0.7);
+}
+
+.pokemonSprite{
+    width: 73%;
+    height: auto;
+
+    background: radial-gradient(#00ddff, #00aede);
+    border: 5px solid #38e2fc;
+    border-radius: 20px;
+
+    margin-bottom: 2vh;
+}
+
+.pokemonType{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.typeImg{
+    width: 40%;
+    height: auto;
+}
+
+.pokemonBio{
+    width: 55%;
+    height: 90%;
+    padding-top: 2px;
+    padding-left: 5px;
+    background-color: #01a1f178;
+    border: 3px solid #38e2fc;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: min(2vh, 18.84px);
+    overflow: auto;
+
+    font-size: 1.3vw;
+    text-shadow:
+        -0.03vw -0.03vw 0 rgba(0, 0, 0, 0.6),
+        0.03vw -0.03vw 0 rgba(0, 0, 0, 0.6),
+        -0.03vw  0.03vw 0 rgba(0, 0, 0, 0.6),
+        0.03vw  0.03vw 0 rgba(0, 0, 0, 0.6);
+    
+}
+/*Scrollbar styling*/
+    ::-webkit-scrollbar {
+    width: 1vw;
+    }
+
+    ::-webkit-scrollbar-track {
+    background: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background: aliceblue;
+    border-radius: 6px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: rgb(211, 218, 224);
+    }
+/**/
+
+.pokemonStats{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    gap: min(0.8vh, 4.71px);
+}
+
+.statsRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: min(3vh, 28.2578px);
+    gap: 0.5vw;
+}
+
+.statName{
+    width: 3vw;
+}
+
+.containerStats{
+    background-color: rgba(234, 243, 251, 0.924);
+    width: 80%;
+    height: 100%;
+
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.statsBar{
+    position: absolute;
+
+    background-color: #01F1C9;
+    height: 100%;
+
+    border-radius: 5px;
+
+    transition: width 0.4s ease-out;
+}
+
+.pokemonEvolution{
+    width: 100%;
+
+    text-align: center;
+}
+
+.pokemonEvolution h2{
+    margin-bottom: 2vh;
+}
+
+.noEvo{
+    margin-bottom: 2vh;
+}
+
+.evoRow{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.evoItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+}
+
+.evoItem p{
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+}
+
+.evoSprite{
+    background-color: rgba(240, 248, 255, 0.711);
+    border: 3px solid #38e2fc;
+    border-radius: 50px;
+}
+
+.downImg{
+    width: min(5vh, 47.0938px);
+    height: min(4vh, 37.6797px);
+
+    margin-bottom: 2vh;
+}
+
+.notFound{
+    height: 85%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2vw;
+}
+
+.notFound h1{
+    text-shadow:
+    0.08vw 0.08vw 0.12vw rgba(0, 0, 0, 0.7);
+}
+
+@media(max-width:700px){
+    .notFound{
+        font-size: 4vw;
+    }
+
+    .welcomeText{
+        font-size: 8vw;
+        position: absolute;
+        transform: translate(25vw,48vh);
+        opacity: 0;
+        
+        color: aliceblue;
+        text-shadow: 0.08vw 0.08vw 0.12vw rgba(0, 0, 0, 0.7);
+
+        animation-name: welcomeAnim;
+        animation-duration: 3s;
+        animation-delay: 5.5s;
+    }
+
+    .dexContent{
+        opacity: 0; /*change for anim*/
+
+        height: 78%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 11vh;
+        padding-bottom: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        overflow: hidden;
+
+        animation-name: contentAnim;
+        animation-duration: 1.5s;
+        animation-delay: 8.5s;
+        animation-fill-mode: forwards;
+        
+    }
+
+    .pokemonEnter{
+        background-size: 4vw auto;   
+    }
+
+    .pokemonResult{
+        height: 90%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        overflow: scroll;
+        background-color: #01a1f178;
+        border: 3px solid #38e2fc;
+        border-radius: 8px;
+        padding-top: 2vh;
+    }
+
+
+    .pokemonData{
+        width: 75%;
+
+        font-size: 8vw;
+        text-shadow:
+        0.08vw 0.08vw 0.12vw rgba(0, 0, 0, 0.7);
+    }
+
+    .pokemonBio{
+        width: 90%;    
+        padding-top: 2px;
+        padding-left: 5px;
+        background-color: transparent;
+        border: none;
+        border-radius: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3vh;
+        overflow: visible;
+
+        font-size: 2vw;
+        text-align: center;        
+    }
+
+    .flavorText, .pokemonBm{
+        font-size: 4vw;
+    }
+
+    .pokemonStats{
+        width: 100%;
+        gap: 1vh;
+
+        font-size: 3vw;
+    }
+
+    .statsRow{
+        width: 100%;
+        height: min(3vh, 28.2578px);
+        gap: 0;
+    }
+
+    .containerStats{
+        margin-left: 4vw;
+        margin-right: 2vw;
+    }
+
+    .pokemonEvolution h2{
+        font-size: 7vw;
+    }
+
+    .noEvo{
+        margin-bottom: 2vh;
+        font-size: 4vw;
+    }
+
+    .evoItem p{
+        font-size: 4vw;
+    }
+
+    .evoSprite{
+        width: 20vw;
+        height: auto;
+        border-radius: 70px;
+    }
+}
+
+
