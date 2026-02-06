@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import bodyLeft from './assets/bodyleft.png'
 import bodyRight from './assets/bodyright.png'
-import Dexscreen from './components/dexscreen.jsx'
+import Dexscreen from './components/Dexscreen.jsx'
 
 import './index.css'
 
