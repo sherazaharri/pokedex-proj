@@ -157,6 +157,13 @@
 }
 
 /*width 400*/
+@keyframes slideUp400600{
+  to{transform: translateY(-63vh) rotate(90deg);}
+}
+
+@keyframes slideDown400600{
+  to{transform: translateY(63vh) rotate(90deg);}
+}
 
 @keyframes slideUp400700{
   to{transform: translateY(-60vh) rotate(90deg);}
@@ -214,11 +221,11 @@
   .mainBody{
     position: absolute;
     width: 85vw;
-    height: 70vh;
+    height: 80vh;
 
     animation-name: openVer;
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
   }
 }
@@ -227,16 +234,16 @@
   .bodyLeft{
     transform: translate(0, -55vh) rotate(90deg);
     animation-name: slideUp700700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 55vh) rotate(90deg);
     animation-name: slideDown700700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -245,16 +252,16 @@
   .bodyLeft{
     transform: translate(0, -49vh) rotate(90deg);
     animation-name: slideUp700800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 49vh) rotate(90deg);
     animation-name: slideDown700800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -263,16 +270,16 @@
   .bodyLeft{
     transform: translate(0, -46vh) rotate(90deg);
     animation-name: slideUp700900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 46vh) rotate(90deg);
     animation-name: slideDown700900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -282,16 +289,16 @@
   .bodyLeft{
     transform: translate(0, -49vh) rotate(90deg);
     animation-name: slideUp600700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 49vh) rotate(90deg);
     animation-name: slideDown600700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -300,16 +307,16 @@
   .bodyLeft{
     transform: translate(0, -45vh) rotate(90deg);
     animation-name: slideUp600800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 45vh) rotate(90deg);
     animation-name: slideDown600800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -318,16 +325,16 @@
   .bodyLeft{
     transform: translate(0, -42vh) rotate(90deg);
     animation-name: slideUp600900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 42vh) rotate(90deg);
     animation-name: slideDown600900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -337,16 +344,16 @@
   .bodyLeft{
     transform: translate(0, -44vh) rotate(90deg);
     animation-name: slideUp500700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 44vh) rotate(90deg);
     animation-name: slideDown500700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -355,16 +362,16 @@
   .bodyLeft{
     transform: translate(0, -41vh) rotate(90deg);
     animation-name: slideUp500800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 41vh) rotate(90deg);
     animation-name: slideDown500800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -373,35 +380,53 @@
   .bodyLeft{
     transform: translate(0, -39vh) rotate(90deg);
     animation-name: slideUp500900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 39vh) rotate(90deg);
     animation-name: slideDown500900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
 
 /*400 width*/
+
+@media(max-width:400px) and (min-height:600px){
+  .bodyLeft{
+    transform: translate(0, -49vh) rotate(90deg);
+    animation-name: slideUp400600;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .bodyRight{
+    transform: translate(0, 49vh) rotate(90deg);
+    animation-name: slideDown400600;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+}
 @media(max-width:400px) and (min-height:700px){
   .bodyLeft{
     transform: translate(0, -39vh) rotate(90deg);
     animation-name: slideUp400700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 39vh) rotate(90deg);
     animation-name: slideDown400700;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -410,16 +435,16 @@
   .bodyLeft{
     transform: translate(0, -36vh) rotate(90deg);
     animation-name: slideUp400800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 36vh) rotate(90deg);
     animation-name: slideDown400800;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }
@@ -428,16 +453,16 @@
   .bodyLeft{
     transform: translate(0, -34vh) rotate(90deg);
     animation-name: slideUp400900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
   .bodyRight{
     transform: translate(0, 34vh) rotate(90deg);
     animation-name: slideDown400900;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 }

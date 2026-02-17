@@ -195,7 +195,7 @@ function Dexscreen(){
         setIsLoading(true);
 
         async function waitForData(){
-            const option = currPokemon.toLowerCase();
+            const option = currPokemon.toLowerCase().trimEnd();
             const response1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${option}`)
             if(!response1.ok){
                 setDataFound(false);
