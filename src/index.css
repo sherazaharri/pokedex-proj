@@ -224,7 +224,7 @@
     height: 80vh;
 
     animation-name: openVer;
-    animation-duration: 1s;
+    animation-duration: 2.5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
   }

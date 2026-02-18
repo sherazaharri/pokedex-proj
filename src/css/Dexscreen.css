@@ -7,7 +7,7 @@
 .welcomeText{
     font-size: 8vw;
     position: absolute;
-    transform: translate(22vw,38vh);
+    transform: translate(22vw,33vh);
     opacity: 0;
     
     color: aliceblue;
