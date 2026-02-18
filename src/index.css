@@ -83,116 +83,116 @@
 /*responsive animations*/
 /*width 700*/
 @keyframes slideUp700700{
-  to{transform: translateY(-76vh) rotate(90deg);}
+  to{transform: translateY(-76dvh) rotate(90deg);}
 }
 
 @keyframes slideDown700700{
-  to{transform: translateY(76vh) rotate(90deg);}
+  to{transform: translateY(76dvh) rotate(90deg);}
 }
 
 @keyframes slideUp700800{
-  to{transform: translateY(-70vh) rotate(90deg);}
+  to{transform: translateY(-70dvh) rotate(90deg);}
 }
 
 @keyframes slideDown700800{
-  to{transform: translateY(70vh) rotate(90deg);}
+  to{transform: translateY(70dvh) rotate(90deg);}
 }
 
 @keyframes slideUp700900{
-  to{transform: translateY(-67vh) rotate(90deg);}
+  to{transform: translateY(-67dvh) rotate(90deg);}
 }
 
 @keyframes slideDown700900{
-  to{transform: translateY(67vh) rotate(90deg);}
+  to{transform: translateY(67dvh) rotate(90deg);}
 }
 
 /*width 600*/
 @keyframes slideUp600700{
-  to{transform: translateY(-70vh) rotate(90deg);}
+  to{transform: translateY(-70dvh) rotate(90deg);}
 }
 
 @keyframes slideDown600700{
-  to{transform: translateY(70vh) rotate(90deg);}
+  to{transform: translateY(70dvh) rotate(90deg);}
 }
 
 @keyframes slideUp600800{
-  to{transform: translateY(-66vh) rotate(90deg);}
+  to{transform: translateY(-66dvh) rotate(90deg);}
 }
 
 @keyframes slideDown600800{
-  to{transform: translateY(66vh) rotate(90deg);}
+  to{transform: translateY(66dvh) rotate(90deg);}
 }
 
 @keyframes slideUp600900{
-  to{transform: translateY(-63vh) rotate(90deg);}
+  to{transform: translateY(-63dvh) rotate(90deg);}
 }
 
 @keyframes slideDown600900{
-  to{transform: translateY(63vh) rotate(90deg);}
+  to{transform: translateY(63dvh) rotate(90deg);}
 }
 
 /*width 500*/
 @keyframes slideUp500700{
-  to{transform: translateY(-65vh) rotate(90deg);}
+  to{transform: translateY(-65dvh) rotate(90deg);}
 }
 
 @keyframes slideDown500700{
-  to{transform: translateY(65vh) rotate(90deg);}
+  to{transform: translateY(65dvh) rotate(90deg);}
 }
 
 @keyframes slideUp500800{
-  to{transform: translateY(-62vh) rotate(90deg);}
+  to{transform: translateY(-62dvh) rotate(90deg);}
 }
 
 @keyframes slideDown500800{
-  to{transform: translateY(62vh) rotate(90deg);}
+  to{transform: translateY(62dvh) rotate(90deg);}
 }
 
 @keyframes slideUp500900{
-  to{transform: translateY(-60vh) rotate(90deg);}
+  to{transform: translateY(-60dvh) rotate(90deg);}
 }
 
 @keyframes slideDown500900{
-  to{transform: translateY(60vh) rotate(90deg);}
+  to{transform: translateY(60dvh) rotate(90deg);}
 }
 
 /*width 400*/
 @keyframes slideUp400600{
-  to{transform: translateY(-63vh) rotate(90deg);}
+  to{transform: translateY(-63dvh) rotate(90deg);}
 }
 
 @keyframes slideDown400600{
-  to{transform: translateY(63vh) rotate(90deg);}
+  to{transform: translateY(63dvh) rotate(90deg);}
 }
 
 @keyframes slideUp400700{
-  to{transform: translateY(-60vh) rotate(90deg);}
+  to{transform: translateY(-60dvh) rotate(90deg);}
 }
 
 @keyframes slideDown400700{
-  to{transform: translateY(60vh) rotate(90deg);}
+  to{transform: translateY(60dvh) rotate(90deg);}
 }
 
 @keyframes slideUp400800{
-  to{transform: translateY(-57vh) rotate(90deg);}
+  to{transform: translateY(-57dvh) rotate(90deg);}
 }
 
 @keyframes slideDown400800{
-  to{transform: translateY(57vh) rotate(90deg);}
+  to{transform: translateY(57dvh) rotate(90deg);}
 }
 
 @keyframes slideUp400900{
-  to{transform: translateY(-55vh) rotate(90deg);}
+  to{transform: translateY(-55dvh) rotate(90deg);}
 }
 
 @keyframes slideDown400900{
-  to{transform: translateY(55vh) rotate(90deg);}
+  to{transform: translateY(55dvh) rotate(90deg);}
 }
 
 /*width 800*/
 @media(max-width: 700px){ /*for changing side img to vertical*/
   .bodyLeft{
-    transform: translate(0, -70vh) rotate(90deg);
+    transform: translate(0, -70dvh) rotate(90deg);
 
     width: auto;
     height: 120vw;
@@ -207,7 +207,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 70vh) rotate(90deg);
+    transform: translate(0, 70dvh) rotate(90deg);
 
     width: auto;
     height: 120vw;
@@ -221,7 +221,7 @@
   .mainBody{
     position: absolute;
     width: 85vw;
-    height: 80vh;
+    height: 80dvh;
 
     animation-name: openVer;
     animation-duration: 1s;
@@ -232,7 +232,7 @@
 
 @media(max-width:700px) and (min-height:700px){
   .bodyLeft{
-    transform: translate(0, -55vh) rotate(90deg);
+    transform: translate(0, -55dvh) rotate(90deg);
     animation-name: slideUp700700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -240,7 +240,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 55vh) rotate(90deg);
+    transform: translate(0, 55dvh) rotate(90deg);
     animation-name: slideDown700700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -250,7 +250,7 @@
 
 @media(max-width:700px) and (min-height:800px){
   .bodyLeft{
-    transform: translate(0, -49vh) rotate(90deg);
+    transform: translate(0, -49dvh) rotate(90deg);
     animation-name: slideUp700800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -258,7 +258,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 49vh) rotate(90deg);
+    transform: translate(0, 49dvh) rotate(90deg);
     animation-name: slideDown700800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -268,7 +268,7 @@
 
 @media(max-width:700px) and (min-height:900px){
   .bodyLeft{
-    transform: translate(0, -46vh) rotate(90deg);
+    transform: translate(0, -46dvh) rotate(90deg);
     animation-name: slideUp700900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -276,7 +276,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 46vh) rotate(90deg);
+    transform: translate(0, 46dvh) rotate(90deg);
     animation-name: slideDown700900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -287,7 +287,7 @@
 /*600 width*/
 @media(max-width:600px) and (min-height:700px){
   .bodyLeft{
-    transform: translate(0, -49vh) rotate(90deg);
+    transform: translate(0, -49dvh) rotate(90deg);
     animation-name: slideUp600700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -295,7 +295,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 49vh) rotate(90deg);
+    transform: translate(0, 49dvh) rotate(90deg);
     animation-name: slideDown600700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -305,7 +305,7 @@
 
 @media(max-width:600px) and (min-height:800px){
   .bodyLeft{
-    transform: translate(0, -45vh) rotate(90deg);
+    transform: translate(0, -45dvh) rotate(90deg);
     animation-name: slideUp600800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -313,7 +313,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 45vh) rotate(90deg);
+    transform: translate(0, 45dvh) rotate(90deg);
     animation-name: slideDown600800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -323,7 +323,7 @@
 
 @media(max-width:600px) and (min-height:900px){
   .bodyLeft{
-    transform: translate(0, -42vh) rotate(90deg);
+    transform: translate(0, -42dvh) rotate(90deg);
     animation-name: slideUp600900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -331,7 +331,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 42vh) rotate(90deg);
+    transform: translate(0, 42dvh) rotate(90deg);
     animation-name: slideDown600900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -342,7 +342,7 @@
 /*500 width*/
 @media(max-width:500px) and (min-height:700px){
   .bodyLeft{
-    transform: translate(0, -44vh) rotate(90deg);
+    transform: translate(0, -44dvh) rotate(90deg);
     animation-name: slideUp500700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -350,7 +350,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 44vh) rotate(90deg);
+    transform: translate(0, 44dvh) rotate(90deg);
     animation-name: slideDown500700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -360,7 +360,7 @@
 
 @media(max-width:500px) and (min-height:800px){
   .bodyLeft{
-    transform: translate(0, -41vh) rotate(90deg);
+    transform: translate(0, -41dvh) rotate(90deg);
     animation-name: slideUp500800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -368,7 +368,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 41vh) rotate(90deg);
+    transform: translate(0, 41dvh) rotate(90deg);
     animation-name: slideDown500800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -378,7 +378,7 @@
 
 @media(max-width:500px) and (min-height:900px){
   .bodyLeft{
-    transform: translate(0, -39vh) rotate(90deg);
+    transform: translate(0, -39dvh) rotate(90deg);
     animation-name: slideUp500900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -386,7 +386,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 39vh) rotate(90deg);
+    transform: translate(0, 39dvh) rotate(90deg);
     animation-name: slideDown500900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -398,7 +398,7 @@
 
 @media(max-width:400px) and (min-height:600px){
   .bodyLeft{
-    transform: translate(0, -49vh) rotate(90deg);
+    transform: translate(0, -49dvh) rotate(90deg);
     animation-name: slideUp400600;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -406,7 +406,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 49vh) rotate(90deg);
+    transform: translate(0, 49dvh) rotate(90deg);
     animation-name: slideDown400600;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -415,7 +415,7 @@
 }
 @media(max-width:400px) and (min-height:700px){
   .bodyLeft{
-    transform: translate(0, -39vh) rotate(90deg);
+    transform: translate(0, -39dvh) rotate(90deg);
     animation-name: slideUp400700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -423,7 +423,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 39vh) rotate(90deg);
+    transform: translate(0, 39dvh) rotate(90deg);
     animation-name: slideDown400700;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -433,7 +433,7 @@
 
 @media(max-width:400px) and (min-height:800px){
   .bodyLeft{
-    transform: translate(0, -36vh) rotate(90deg);
+    transform: translate(0, -36dvh) rotate(90deg);
     animation-name: slideUp400800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -441,7 +441,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 36vh) rotate(90deg);
+    transform: translate(0, 36dvh) rotate(90deg);
     animation-name: slideDown400800;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -451,7 +451,7 @@
 
 @media(max-width:400px) and (min-height:900px){
   .bodyLeft{
-    transform: translate(0, -34vh) rotate(90deg);
+    transform: translate(0, -34dvh) rotate(90deg);
     animation-name: slideUp400900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -459,7 +459,7 @@
   }
 
   .bodyRight{
-    transform: translate(0, 34vh) rotate(90deg);
+    transform: translate(0, 34dvh) rotate(90deg);
     animation-name: slideDown400900;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
