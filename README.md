@@ -50,7 +50,7 @@ Optimized for:
 
 
 ## Future Improvements
-A list of features and improvements I aimt to implement in the future
+A list of features and improvements I aim to implement in the future
 - Option to skip opening animation
 - Updated background design
 - Favorites system
