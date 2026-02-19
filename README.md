@@ -2,7 +2,7 @@
 https://pokedexprojrz.netlify.app/
 
 # Custom Pokedex Project
-This project is a fully responsive, custom-built Pokedex application powered by the PokeAPI. It was developed to strengthen my understanding of:
+This project is a fully responsive, custom-built Pokedex application powered by PokeAPI. It was developed to strengthen my understanding of:
 - Consuming RESTful APIs
 - Managing asynchronous data in React
 - Designing complex responsive layouts
