@@ -38,6 +38,7 @@ function Dexscreen(){
     const [chainSprites, setChainSprites] = useState([]);
     const [dataFound, setDataFound] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [firstLoad, setFirstLoad] = useState(true);
 
 
     const typeImages = {
@@ -192,6 +193,10 @@ function Dexscreen(){
             return
         }
 
+        if(firstLoad == true){
+            setFirstLoad(false);
+        }
+
         setIsLoading(true);
 
         async function waitForData(){
@@ -220,72 +225,78 @@ function Dexscreen(){
                         <h1>Loading...</h1>
                     </div> 
                 ): (
-                    dataFound ? (
-                        <div className='pokemonResult'>
-                            <div className='pokemonData'>
-                                <img className='pokemonSprite' src={pokemonSprite}></img>
-                                <p>{nameDisplay}</p>
-                                <div className='pokemonType'>
-                                {
-                                    pokeType.map(type => (
-                                    <img key={type} className='typeImg' src={typeImages[type]} alt={type}/>
-                                    ))
-                                }
+                    firstLoad ? (
+                        <div className='firstText'>
+                            <h1>Start searching for a Pokémon!</h1>
+                        </div>  
+                    ) : (
+                        dataFound ? (
+                            <div className='pokemonResult'>
+                                <div className='pokemonData'>
+                                    <img className='pokemonSprite' src={pokemonSprite}></img>
+                                    <p>{nameDisplay}</p>
+                                    <div className='pokemonType'>
+                                    {
+                                        pokeType.map(type => (
+                                        <img key={type} className='typeImg' src={typeImages[type]} alt={type}/>
+                                        ))
+                                    }
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='pokemonBio'>
-                                <p className='flavorText'>{pokeText}</p>
-                                <div className='pokemonBm'>
-                                    <p>Height: {pokeHeight} cm</p>
-                                    <p>Weight: {pokeWeight} kg</p>
-                                </div>
-                                <div className='pokemonStats'>
+                                <div className='pokemonBio'>
+                                    <p className='flavorText'>{pokeText}</p>
+                                    <div className='pokemonBm'>
+                                        <p>Height: {pokeHeight} cm</p>
+                                        <p>Weight: {pokeWeight} kg</p>
+                                    </div>
+                                    <div className='pokemonStats'>
+                                            {
+                                                pokeStats.map(cstat => (
+                                                    <div key={cstat.name} className='statsRow'>
+                                                        <p className='statName'>{cstat.name}</p>
+                                                        <div className='containerStats'>
+                                                            <div className='statsBar' style={{ width: `${(cstat.stat*100)/255}%` }}></div>
+                                                        </div> 
+                                                        <p>{cstat.stat}</p>
+                                                    </div>
+                                                ))
+                                            }
+                                    </div>
+                                    <div className='pokemonEvolution'>
+                                        <h2>Evolutions</h2>
                                         {
-                                            pokeStats.map(cstat => (
-                                                <div key={cstat.name} className='statsRow'>
-                                                    <p className='statName'>{cstat.name}</p>
-                                                    <div className='containerStats'>
-                                                        <div className='statsBar' style={{ width: `${(cstat.stat*100)/255}%` }}></div>
-                                                    </div> 
-                                                    <p>{cstat.stat}</p>
+                                            pokeChain.length == 1 && (
+                                                <p className='noEvo'>This Pokemon has no evolutions</p>
+                                            )
+                                        }
+                                        {
+                                            pokeChain.map((row, rowIndex) => (
+                                                <div key={rowIndex} className='evoWhole'>
+                                                    <div className='evoRow'>
+                                                        {
+                                                            row.map(cpoke => (
+                                                                <div key={cpoke} className='evoItem'>
+                                                                    <img src={chainSprites.find(p => p.name === cpoke)?.sprite} alt={cpoke} className='evoSprite'/>
+                                                                    <p>{capitalize(chainSprites.find(n => n.name ==  cpoke)?.name)}</p>
+                                                                </div>
+                                                            ))
+                                                        }
+                                                    </div>
+                                                    {rowIndex < pokeChain.length - 1 && (
+                                                        <img src={downimg} alt="down arrow" className='downImg'/>
+                                                    )}
                                                 </div>
                                             ))
                                         }
-                                </div>
-                                <div className='pokemonEvolution'>
-                                    <h2>Evolutions</h2>
-                                    {
-                                        pokeChain.length == 1 && (
-                                            <p className='noEvo'>This Pokemon has no evolutions</p>
-                                        )
-                                    }
-                                    {
-                                        pokeChain.map((row, rowIndex) => (
-                                            <div key={rowIndex} className='evoWhole'>
-                                                <div className='evoRow'>
-                                                    {
-                                                        row.map(cpoke => (
-                                                            <div key={cpoke} className='evoItem'>
-                                                                <img src={chainSprites.find(p => p.name === cpoke)?.sprite} alt={cpoke} className='evoSprite'/>
-                                                                <p>{capitalize(chainSprites.find(n => n.name ==  cpoke)?.name)}</p>
-                                                            </div>
-                                                        ))
-                                                    }
-                                                </div>
-                                                {rowIndex < pokeChain.length - 1 && (
-                                                    <img src={downimg} alt="down arrow" className='downImg'/>
-                                                )}
-                                            </div>
-                                        ))
-                                    }
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ) : (
-                        <div className='notFound'>
-                            <h1>DATA NOT FOUND</h1>
-                            <p>Start searching for a Pokémon!</p>
-                        </div>  
+                        ) : (
+                            <div className='notFound'>
+                                <h1>DATA NOT FOUND</h1>
+                                <p>Try searching for a different Pokémon!</p>
+                            </div>  
+                        )
                     )
                 )}
             </div>
